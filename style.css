@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+
+
+/* Corpo principal, deixando a caixa principal centralizada(DESKTOP) */
+body{
+    margin: 0;
+}
+
+.principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+/* Caixa principal, com duas caixas em linha (DESKTOP) */
+
+.principal_secao{ 
+    border-radius: 10px;
+    border: 1px solid bisque;   
+    width: 50%;
+    height: 60%;
+    display: flex;    
+}
+
+/* Caixa com imagem (DESKTOP)  */
+.principal_secao_imagem{
+    border-radius: 15px 0 0 20px;
+    background-image: url("image-product-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+}
+
+/* Caixa com conteudo (DESKTOP) */
+.principal_secao_conteudo{
+    display: flex;
+    height: 100%;
+    width: 50%;
+}
+
+.container_conteudo{
+    width: 100%;
+    box-sizing: border-box; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.conteudo_perfume{
+    color: hsl(228, 12%, 48%);
+    font-family: 'Fraunces', serif;   
+}
+
+.conteudo_titulo{    
+    font-family: 'Fraunces', serif;
+    font-size: 40px;    
+}
+
+.conteudo_conteudo{
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    line-height: 28px;
+    font-family: 'Montserrat';
+}
+
+.conteudo_preco{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo_preco_preco{
+    color: hsl(158, 36%, 37%);
+    font-weight: 600;
+    font-size: 30px;
+    font-family: 'Fraunces', serif;
+}
+
+.conteudo_preco_preco_desconto{
+    text-decoration: line-through;
+    color:hsl(228, 12%, 48%);
+}
+
+.container_botao{        
+    border-radius: 10px;
+    background-color: hsl(158, 36%, 37%);
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    height: 50px;
+    gap: 10px;
+}
+
+.conteudo_link{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    font-size: 24px;
+    font-weight: 550;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* ESTILIZAÇÃO PARA MOBILE, MAX WIDTH 675PX */
+
+@media (max-width:675px){
+
+    .principal{
+        height: auto;
+        width: auto;
+        
+    }
+
+    .principal_secao{
+        width: 80%;
+        flex-direction: column;
+        margin: 20px 0;
+    }
+
+    .principal_secao_imagem{
+        background-image: url("image-product-mobile.jpg");
+        height: 300px;
+        width: 100%;        
+        border-radius: 10px 10px 0 0 ;
+        background-size: cover;
+    }
+
+    .principal_secao_conteudo{
+        width: 100%;        
+    }    
+}
+
